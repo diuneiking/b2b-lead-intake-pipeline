@@ -1,0 +1,142 @@
+{
+  "file_type": "mock_crm_activities",
+  "description": "Mock CRM activity and note payloads for sales follow-up and duplicate account handling.",
+  "generated_at": "2026-06-16T07:06:26.306Z",
+  "record_count": 2,
+  "scoring_note": {
+    "total_score": "Internal 0-100 operational score remains unchanged.",
+    "tier": "Existing internal tier remains unchanged.",
+    "client_score_1_to_5": "Client-facing score derived directly from tier: A=5, B=4, C=3, D=2, blocked/rejected/disqualified=1.",
+    "score_rationale": "One-sentence explanation of the client-facing 1-5 score."
+  },
+  "quality_checks": {
+    "has_unknown_destinations": false,
+    "audit_log_count_matches_input_leads": true,
+    "has_crm_deals": true,
+    "has_crm_activities": true,
+    "has_human_review_records": true,
+    "total_count_reconciles": true
+  },
+  "source_counts": {
+    "total_output_records": 26,
+    "mock_crm_deals": 2,
+    "mock_crm_activities": 2,
+    "human_review_queue": 4,
+    "audit_log": 18,
+    "unknown_destination_records": 0
+  },
+  "records": [
+    {
+      "output_id": "1781593586069_6_crm_activity_1781593586269",
+      "output_type": "crm_activity",
+      "operation": "create_follow_up_activity",
+      "destination": "mock_crm_activities",
+      "prepared_at": "2026-06-16T07:06:26.269Z",
+      "intake_id": "1781593586069_6",
+      "source": "web_form",
+      "company_display_name": "HelioWorks Manufacturing Sdn Bhd",
+      "company_domain": "",
+      "person_full_name": "Kumar Dev",
+      "email": "kumar.dev@gmail.com",
+      "phone": "+60 16 55511",
+      "country": "Malaysia",
+      "language": "en",
+      "route": "qualified_to_crm",
+      "action": "create_crm_deal_and_activity",
+      "owner_team": "sales",
+      "routing_priority": "high",
+      "review_required": false,
+      "score_status": "scored",
+      "total_score": 82,
+      "tier": "A",
+      "client_score_1_to_5": 5,
+      "score_rationale": "Client score 5 because this is a Tier A lead with strong fit and high sales priority.",
+      "score_confidence": "medium",
+      "validation_status": "valid",
+      "dedup_status": "new",
+      "enrichment_status": "not_found",
+      "enrichment_validation_status": "no_data",
+      "payload": {
+        "operation": "create_follow_up_activity",
+        "system": "mock_crm",
+        "organization_name": "HelioWorks Manufacturing Sdn Bhd",
+        "matched_crm_org_id": null,
+        "activity_type": "call",
+        "subject": "Follow up with HelioWorks Manufacturing Sdn Bhd",
+        "due_in_hours": 4,
+        "owner_team": "sales",
+        "contact": {
+          "name": "Kumar Dev",
+          "email": "kumar.dev@gmail.com",
+          "phone": "+60 16 55511"
+        },
+        "context": {
+          "route": "qualified_to_crm",
+          "score": 82,
+          "tier": "A",
+          "client_score_1_to_5": 5,
+          "score_rationale": "Client score 5 because this is a Tier A lead with strong fit and high sales priority.",
+          "source": "web_form",
+          "interest": "Industrial solar",
+          "message": "Our factory in Shah Alam is looking at rooftop solar for next year."
+        }
+      }
+    },
+    {
+      "output_id": "1781593586070_13_crm_activity_1781593586269",
+      "output_type": "crm_activity",
+      "operation": "create_follow_up_activity",
+      "destination": "mock_crm_activities",
+      "prepared_at": "2026-06-16T07:06:26.269Z",
+      "intake_id": "1781593586070_13",
+      "source": "csv_import",
+      "company_display_name": "Penang Municipal Energy",
+      "company_domain": "penang-municipal-energy.example",
+      "person_full_name": "Lim Wei Jian",
+      "email": "wei.jian@penang-municipal-energy.example",
+      "phone": "+60 4 77777",
+      "country": "Malaysia",
+      "language": "ms",
+      "route": "qualified_to_crm",
+      "action": "create_crm_deal_and_activity",
+      "owner_team": "sales",
+      "routing_priority": "high",
+      "review_required": false,
+      "score_status": "scored",
+      "total_score": 100,
+      "tier": "A",
+      "client_score_1_to_5": 5,
+      "score_rationale": "Client score 5 because this is a Tier A lead with strong fit and high sales priority.",
+      "score_confidence": "high",
+      "validation_status": "valid",
+      "dedup_status": "new",
+      "enrichment_status": "enriched",
+      "enrichment_validation_status": "valid",
+      "payload": {
+        "operation": "create_follow_up_activity",
+        "system": "mock_crm",
+        "organization_name": "Penang Municipal Energy",
+        "matched_crm_org_id": null,
+        "activity_type": "call",
+        "subject": "Follow up with Penang Municipal Energy",
+        "due_in_hours": 4,
+        "owner_team": "sales",
+        "contact": {
+          "name": "Lim Wei Jian",
+          "email": "wei.jian@penang-municipal-energy.example",
+          "phone": "+60 4 77777"
+        },
+        "context": {
+          "route": "qualified_to_crm",
+          "score": 100,
+          "tier": "A",
+          "client_score_1_to_5": 5,
+          "score_rationale": "Client score 5 because this is a Tier A lead with strong fit and high sales priority.",
+          "source": "csv_import",
+          "interest": "Solar and energy efficiency",
+          "message": "Selamat pagi, kami sedang menilai pilihan solar untuk bangunan majlis."
+        }
+      }
+    }
+  ]
+}

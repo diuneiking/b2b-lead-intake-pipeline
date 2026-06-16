@@ -1,0 +1,19 @@
+timestamp,first_name,last_name,company_name,email,phone,country,interest,message,source,language
+2026-06-01T08:14:00+08:00,Amir,Hakim,MetroSolar Solutions Sdn Bhd,amir.hakim@metrosolar.example,+60 12 850011,Malaysia,Solar farm development,"We are evaluating solar farm development options for several commercial sites in Selangor.",web_form,en
+2026-06-02T10:30:00+08:00,Mei Lin,Tan,MetroSolar Group,mei.lin@metrosolar.example,+60 3 810044,Malaysia,Wind project,"Our procurement team is assessing new renewable energy partners.",web_form,en
+2026-06-03T11:05:00+08:00,Farid,Azman,GridNusa Energy Sdn Bhd,farid.azman@gridnusa.example,+60 4 620033,Malaysia,Energy storage,"Kami sedang mencari rakan kongsi untuk sistem bateri dan integrasi grid.",web_form,ms
+2026-06-04T09:22:00+08:00,Siti,Aisyah,InfraMaju Holdings Sdn Bhd,siti.aisyah@inframaju.example,+60 3 450022,Malaysia,Solar project partnership,"We are interested in discussing a solar project partnership.",web_form,en
+2026-06-05T14:45:00+08:00,Jason,Lim,MetroSolar Solutions Sdn Bhd,jason.lim@metrosolar.example,+60 12 123456,Malaysia,Solar project partnership,"We would like to explore a long-term solar supply agreement for our facilities.",web_form,en
+2026-06-06T08:55:00+08:00,Jason,Lim,MetroSolar Solutions Sdn Bhd,jason.lim@metrosolar.example,+60 12 123456,Malaysia,Solar project partnership,"We would like to explore a long-term solar supply agreement for our facilities.",csv_import,en
+2026-06-07T13:10:00+08:00,Kumar,Dev,HelioWorks Manufacturing Sdn Bhd,kumar.dev@gmail.com,+60 16 55511,Malaysia,Industrial solar,"Our factory in Shah Alam is looking at rooftop solar for next year.",web_form,en
+2026-06-08T10:00:00+08:00,Nurul,Hana,BluePeak Trading Sdn Bhd,nurul.hana@bluepeak-trading.example,+60 3 80033,Malaysia,Commercial solar,"Interested in a 500kW rooftop installation for our warehouse in Klang.",csv_import,en
+2026-06-09T09:35:00+08:00,Vincent,Chong,MS,v.chong@metrosolar.example,+60 12 22222,Malaysia,Wind project,"We are reviewing renewable energy procurement options for next year.",web_form,en
+2026-06-10T11:20:00+08:00,Aina,Rahman,Metro Solar Solutions,aina.rahman@metrosolar.example,+60 12 333333,Malaysia,PV project,"Looking to expand our existing PV capacity across company-owned buildings.",web_form,en
+2026-06-11T08:40:00+08:00,Daniel,Ng,InfraMaju Solar Sdn Bhd,daniel.ng@inframaju.example,+60 19 111111,Malaysia,Solar farm development,"InfraMaju Solar is actively tendering for a new solar farm partner.",csv_import,en
+2026-06-12T09:15:00+08:00,Farah,Yusof,InfraMaju Renewable Sdn Bhd,farah.yusof@inframaju.example,+60 19 222222,Malaysia,Wind project,"InfraMaju Renewable is looking for suppliers for renewable project development.",csv_import,en
+2026-06-13T15:30:00+08:00,Ben,Lee,,ben.lee@gmail.com,,Malaysia,Renewable partnership,"Hi, I saw your ad online and I am interested in renewable energy options.",web_form,en
+2026-06-14T10:05:00+08:00,Lim,Wei Jian,Penang Municipal Energy,wei.jian@penang-municipal-energy.example,+60 4 77777,Malaysia,Solar and energy efficiency,"Selamat pagi, kami sedang menilai pilihan solar untuk bangunan majlis.",csv_import,ms
+2026-06-15T09:50:00+08:00,Nadia,Omar,,nadia.omar@gmail.com,+60 17 88888,Malaysia,Energy procurement,"We are a mid-sized industrial energy buyer comparing options.",web_form,en
+2026-06-15T11:00:00+08:00,Wei,Zhang,Shenzhen Green Power Co.,wei.zhang@gmail.com,+86 75 8888999,China,Solar equipment supply,"We manufacture solar panels and want to offer supply pricing.",web_form,en
+2026-06-15T11:30:00+08:00,Luca,Conti,Emel Green Power Italia,l.conti@emel-green.example,+39 06 8305111,Italy,Wind project,"Emel Green Power is assessing cross-border project options.",csv_import,en
+2026-06-15T12:00:00+08:00,,,,,,,,,csv_import,

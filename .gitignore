@@ -1,0 +1,29 @@
+# n8n local runtime data
+n8n_data/
+.n8n/
+.n8n-files/
+
+# Local n8n database / logs
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+n8nEventLog*.log
+crash.journal
+
+# Runtime logs
+error_logs/*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Environment variables / secrets
+.env
+*.env
+
+# Temporary files
+tmp/
+temp/
+*.bak

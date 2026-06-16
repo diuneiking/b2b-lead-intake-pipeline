@@ -1,0 +1,82 @@
+{
+  "name": "Lead Pipeline Error Handler",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "29b4f82a-278a-4211-b5f7-3f1eda46a7a8",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * 01 - Build Error Log File\n *\n * Purpose:\n * - Receives error details from n8n Error Trigger.\n * - Builds a clean JSON error log.\n * - Converts it to binary so the next node can write it to disk.\n *\n * Portfolio version:\n * - Generic B2B lead pipeline wording\n * - No client, company, or assessment-specific naming\n */\n\nfunction safe(value, fallback = \"\") {\n  if (value === null || value === undefined || value === \"\") return fallback;\n  return value;\n}\n\nfunction cleanFileTimestamp() {\n  return new Date()\n    .toISOString()\n    .replace(/[:.]/g, \"-\");\n}\n\nconst errorEvent = items[0]?.json || {};\n\nconst workflow = errorEvent.workflow || {};\nconst execution = errorEvent.execution || {};\nconst node = errorEvent.node || {};\nconst topLevelError = errorEvent.error || {};\nconst executionError = execution.error || {};\n\nconst timestamp = new Date().toISOString();\nconst fileTimestamp = cleanFileTimestamp();\n\nconst failedNodeName =\n  safe(node.name, \"\") ||\n  safe(execution.lastNodeExecuted, \"unknown\");\n\nconst failedNodeType =\n  safe(node.type, \"unknown\");\n\nconst errorName =\n  safe(topLevelError.name, \"\") ||\n  safe(executionError.name, \"unknown\");\n\nconst errorMessage =\n  safe(topLevelError.message, \"\") ||\n  safe(executionError.message, \"unknown\");\n\nconst errorStack =\n  safe(topLevelError.stack, \"\") ||\n  safe(executionError.stack, \"\");\n\nconst errorLog = {\n  file_type: \"lead_pipeline_error_log\",\n  generated_at: timestamp,\n\n  workflow: {\n    id: safe(workflow.id, \"unknown\"),\n    name: safe(workflow.name, \"unknown\")\n  },\n\n  execution: {\n    id: safe(execution.id, \"unknown\"),\n    mode: safe(execution.mode, \"unknown\"),\n    url: safe(execution.url, \"\"),\n    retry_of: safe(execution.retryOf, \"\")\n  },\n\n  failed_node: {\n    name: failedNodeName,\n    type: failedNodeType\n  },\n\n  error: {\n    name: errorName,\n    message: errorMessage,\n    stack: errorStack\n  },\n\n  raw_error_event: errorEvent\n};\n\nconst fileName = `lead_pipeline_error_log_${fileTimestamp}.json`;\nconst filePath = `/home/node/.n8n-files/error_logs/${fileName}`;\nconst fileContent = JSON.stringify(errorLog, null, 2);\n\nreturn [\n  {\n    json: {\n      file_name: fileName,\n      file_path: filePath,\n      generated_at: timestamp,\n      error_workflow_status: \"prepared\",\n      workflow_name: errorLog.workflow.name,\n      failed_node_name: errorLog.failed_node.name,\n      error_message: errorLog.error.message\n    },\n    binary: {\n      data: {\n        data: Buffer.from(fileContent, \"utf8\").toString(\"base64\"),\n        mimeType: \"application/json\",\n        fileName\n      }\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        192,
+        0
+      ],
+      "id": "7d8556bd-c979-4738-be9a-7bd0f495c82f",
+      "name": "01 - Build Error Log File"
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $json.file_path }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        384,
+        0
+      ],
+      "id": "a2dbc932-014b-407b-adde-91a1a06cb13a",
+      "name": "02 - Write Error Log File"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "01 - Build Error Log File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "01 - Build Error Log File": {
+      "main": [
+        [
+          {
+            "node": "02 - Write Error Log File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "a4ff7395-0005-4b2e-8763-c48537500765",
+  "meta": {
+    "instanceId": "3805adc411ee1409659444fdf3412c56a71a2675f75a5fddf4b3d8fff5f05d1c"
+  },
+  "nodeGroups": [],
+  "id": "JdqHih4PoxN5kNhv",
+  "tags": []
+}

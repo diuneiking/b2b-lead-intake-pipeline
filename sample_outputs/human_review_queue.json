@@ -1,0 +1,409 @@
+{
+  "file_type": "human_review_queue",
+  "description": "Human review queue records for possible duplicates, weak company identity, non-target market, secondary-market review, or enrichment validation issues.",
+  "generated_at": "2026-06-16T07:06:26.306Z",
+  "record_count": 4,
+  "scoring_note": {
+    "total_score": "Internal 0-100 operational score remains unchanged.",
+    "tier": "Existing internal tier remains unchanged.",
+    "client_score_1_to_5": "Client-facing score derived directly from tier: A=5, B=4, C=3, D=2, blocked/rejected/disqualified=1.",
+    "score_rationale": "One-sentence explanation of the client-facing 1-5 score."
+  },
+  "quality_checks": {
+    "has_unknown_destinations": false,
+    "audit_log_count_matches_input_leads": true,
+    "has_crm_deals": true,
+    "has_crm_activities": true,
+    "has_human_review_records": true,
+    "total_count_reconciles": true
+  },
+  "source_counts": {
+    "total_output_records": 26,
+    "mock_crm_deals": 2,
+    "mock_crm_activities": 2,
+    "human_review_queue": 4,
+    "audit_log": 18,
+    "unknown_destination_records": 0
+  },
+  "records": [
+    {
+      "output_id": "1781593586070_12_human_review_1781593586269",
+      "output_type": "human_review",
+      "operation": "add_to_human_review_queue",
+      "destination": "human_review_queue",
+      "prepared_at": "2026-06-16T07:06:26.269Z",
+      "intake_id": "1781593586070_12",
+      "source": "web_form",
+      "company_display_name": "unknown",
+      "company_domain": "",
+      "person_full_name": "Ben Lee",
+      "email": "ben.lee@gmail.com",
+      "phone": "",
+      "country": "Malaysia",
+      "language": "en",
+      "route": "manual_review",
+      "action": "manual_data_quality_review",
+      "owner_team": "sales_operations",
+      "routing_priority": "low",
+      "review_required": true,
+      "score_status": "scored",
+      "total_score": 38,
+      "tier": "D",
+      "client_score_1_to_5": 2,
+      "score_rationale": "Client score 2 because this is a Tier D lead with weak fit or significant data-quality concerns.",
+      "score_confidence": "low",
+      "validation_status": "needs_review",
+      "dedup_status": "new",
+      "enrichment_status": "not_found",
+      "enrichment_validation_status": "no_data",
+      "payload": {
+        "operation": "add_to_human_review_queue",
+        "queue": "manual_review",
+        "owner_team": "sales_operations",
+        "priority": "low",
+        "sla_hours": 48,
+        "company_display_name": "unknown",
+        "company_display_source": "unavailable",
+        "company_name_needs_review": true,
+        "company_domain": null,
+        "contact": {
+          "name": "Ben Lee",
+          "email": "ben.lee@gmail.com",
+          "phone": null
+        },
+        "reason": "Lead has data quality issues that require review before outreach.",
+        "next_step": "Fix or confirm company identity before routing to sales.",
+        "route_notes": [
+          "Validation status: needs_review",
+          "Dedup status: new",
+          "Enrichment validation status: no_data",
+          "Score status: scored",
+          "Score: 38",
+          "Tier: D",
+          "Country: Malaysia",
+          "No company name or usable company domain found.",
+          "Generic email domain and no company name. Cannot identify company confidently.",
+          "Extraction confidence is low.",
+          "Validation status requires human review.",
+          "Company identity is weak or missing."
+        ],
+        "validation": {
+          "status": "needs_review",
+          "errors": [
+            "missing_company_identity",
+            "generic_email_without_company"
+          ],
+          "warnings": [
+            "low_extraction_confidence"
+          ],
+          "review_reasons": [
+            "No company name or usable company domain found.",
+            "Generic email domain and no company name. Cannot identify company confidently.",
+            "Extraction confidence is low."
+          ]
+        },
+        "dedup": {
+          "status": "new",
+          "matched_company_name": "",
+          "matched_crm_org_id": "",
+          "match_type": "no_match",
+          "reason": "No duplicate found against mock CRM organizations."
+        },
+        "score": {
+          "total_score": 38,
+          "tier": "D",
+          "client_score_1_to_5": 2,
+          "score_rationale": "Client score 2 because this is a Tier D lead with weak fit or significant data-quality concerns.",
+          "confidence": "low",
+          "flags": [
+            "needs_review",
+            "missing_company_identity",
+            "missing_phone",
+            "no_trusted_enrichment_used",
+            "generic_email_without_company"
+          ],
+          "review_reasons": [
+            "Validation status requires human review.",
+            "Company identity is weak or missing."
+          ]
+        }
+      }
+    },
+    {
+      "output_id": "1781593586070_14_human_review_1781593586269",
+      "output_type": "human_review",
+      "operation": "add_to_human_review_queue",
+      "destination": "human_review_queue",
+      "prepared_at": "2026-06-16T07:06:26.269Z",
+      "intake_id": "1781593586070_14",
+      "source": "web_form",
+      "company_display_name": "unknown",
+      "company_domain": "",
+      "person_full_name": "Nadia Omar",
+      "email": "nadia.omar@gmail.com",
+      "phone": "+60 17 88888",
+      "country": "Malaysia",
+      "language": "en",
+      "route": "manual_review",
+      "action": "manual_data_quality_review",
+      "owner_team": "sales_operations",
+      "routing_priority": "low",
+      "review_required": true,
+      "score_status": "scored",
+      "total_score": 40,
+      "tier": "C",
+      "client_score_1_to_5": 3,
+      "score_rationale": "Client score 3 because this is a Tier C lead with moderate fit and should be treated as lower-priority or nurture.",
+      "score_confidence": "low",
+      "validation_status": "needs_review",
+      "dedup_status": "new",
+      "enrichment_status": "not_found",
+      "enrichment_validation_status": "no_data",
+      "payload": {
+        "operation": "add_to_human_review_queue",
+        "queue": "manual_review",
+        "owner_team": "sales_operations",
+        "priority": "low",
+        "sla_hours": 48,
+        "company_display_name": "unknown",
+        "company_display_source": "unavailable",
+        "company_name_needs_review": true,
+        "company_domain": null,
+        "contact": {
+          "name": "Nadia Omar",
+          "email": "nadia.omar@gmail.com",
+          "phone": "+60 17 88888"
+        },
+        "reason": "Lead has data quality issues that require review before outreach.",
+        "next_step": "Fix or confirm company identity before routing to sales.",
+        "route_notes": [
+          "Validation status: needs_review",
+          "Dedup status: new",
+          "Enrichment validation status: no_data",
+          "Score status: scored",
+          "Score: 40",
+          "Tier: C",
+          "Country: Malaysia",
+          "No company name or usable company domain found.",
+          "Generic email domain and no company name. Cannot identify company confidently.",
+          "Extraction confidence is low.",
+          "Validation status requires human review.",
+          "Company identity is weak or missing."
+        ],
+        "validation": {
+          "status": "needs_review",
+          "errors": [
+            "missing_company_identity",
+            "generic_email_without_company"
+          ],
+          "warnings": [
+            "low_extraction_confidence"
+          ],
+          "review_reasons": [
+            "No company name or usable company domain found.",
+            "Generic email domain and no company name. Cannot identify company confidently.",
+            "Extraction confidence is low."
+          ]
+        },
+        "dedup": {
+          "status": "new",
+          "matched_company_name": "",
+          "matched_crm_org_id": "",
+          "match_type": "no_match",
+          "reason": "No duplicate found against mock CRM organizations."
+        },
+        "score": {
+          "total_score": 40,
+          "tier": "C",
+          "client_score_1_to_5": 3,
+          "score_rationale": "Client score 3 because this is a Tier C lead with moderate fit and should be treated as lower-priority or nurture.",
+          "confidence": "low",
+          "flags": [
+            "needs_review",
+            "missing_company_identity",
+            "no_trusted_enrichment_used",
+            "generic_email_without_company"
+          ],
+          "review_reasons": [
+            "Validation status requires human review.",
+            "Company identity is weak or missing."
+          ]
+        }
+      }
+    },
+    {
+      "output_id": "1781593586070_15_human_review_1781593586269",
+      "output_type": "human_review",
+      "operation": "add_to_human_review_queue",
+      "destination": "human_review_queue",
+      "prepared_at": "2026-06-16T07:06:26.269Z",
+      "intake_id": "1781593586070_15",
+      "source": "web_form",
+      "company_display_name": "Shenzhen Green Power Co.",
+      "company_domain": "",
+      "person_full_name": "Wei Zhang",
+      "email": "wei.zhang@gmail.com",
+      "phone": "+86 75 8888999",
+      "country": "China",
+      "language": "en",
+      "route": "non_target_market_review",
+      "action": "manual_market_fit_review",
+      "owner_team": "partnerships",
+      "routing_priority": "low",
+      "review_required": true,
+      "score_status": "scored",
+      "total_score": 49,
+      "tier": "C",
+      "client_score_1_to_5": 3,
+      "score_rationale": "Client score 3 because this is a Tier C lead with moderate fit and should be treated as lower-priority or nurture.",
+      "score_confidence": "medium",
+      "validation_status": "valid",
+      "dedup_status": "new",
+      "enrichment_status": "not_found",
+      "enrichment_validation_status": "no_data",
+      "payload": {
+        "operation": "add_to_human_review_queue",
+        "queue": "non_target_market_review",
+        "owner_team": "partnerships",
+        "priority": "low",
+        "sla_hours": 48,
+        "company_display_name": "Shenzhen Green Power Co.",
+        "company_display_source": "extracted_raw_company_name",
+        "company_name_needs_review": false,
+        "company_domain": null,
+        "contact": {
+          "name": "Wei Zhang",
+          "email": "wei.zhang@gmail.com",
+          "phone": "+86 75 8888999"
+        },
+        "reason": "Lead is outside the current target Southeast Asia market.",
+        "next_step": "Review for partnership, supplier, or future expansion relevance.",
+        "route_notes": [
+          "Validation status: valid",
+          "Dedup status: new",
+          "Enrichment validation status: no_data",
+          "Score status: scored",
+          "Score: 49",
+          "Tier: C",
+          "Country: China",
+          "Do not route to normal Malaysia sales workflow without review."
+        ],
+        "validation": {
+          "status": "valid",
+          "errors": [],
+          "warnings": [],
+          "review_reasons": []
+        },
+        "dedup": {
+          "status": "new",
+          "matched_company_name": "",
+          "matched_crm_org_id": "",
+          "match_type": "no_match",
+          "reason": "No strong duplicate match found."
+        },
+        "score": {
+          "total_score": 49,
+          "tier": "C",
+          "client_score_1_to_5": 3,
+          "score_rationale": "Client score 3 because this is a Tier C lead with moderate fit and should be treated as lower-priority or nurture.",
+          "confidence": "medium",
+          "flags": [
+            "outside_target_market",
+            "supplier_or_vendor_style_lead",
+            "no_trusted_enrichment_used"
+          ],
+          "review_reasons": [
+            "Country is outside the main target market.",
+            "Lead may be a supplier rather than a buyer or project partner."
+          ]
+        }
+      }
+    },
+    {
+      "output_id": "1781593586070_16_human_review_1781593586269",
+      "output_type": "human_review",
+      "operation": "add_to_human_review_queue",
+      "destination": "human_review_queue",
+      "prepared_at": "2026-06-16T07:06:26.269Z",
+      "intake_id": "1781593586070_16",
+      "source": "csv_import",
+      "company_display_name": "Emel Green Power Italia",
+      "company_domain": "emel-green.example",
+      "person_full_name": "Luca Conti",
+      "email": "l.conti@emel-green.example",
+      "phone": "+39 06 8305111",
+      "country": "Italy",
+      "language": "en",
+      "route": "non_target_market_review",
+      "action": "manual_market_fit_review",
+      "owner_team": "partnerships",
+      "routing_priority": "medium",
+      "review_required": true,
+      "score_status": "scored",
+      "total_score": 65,
+      "tier": "B",
+      "client_score_1_to_5": 4,
+      "score_rationale": "Client score 4 because this is a Tier B lead with good fit but lower urgency or confidence than Tier A.",
+      "score_confidence": "medium",
+      "validation_status": "valid",
+      "dedup_status": "new",
+      "enrichment_status": "not_found",
+      "enrichment_validation_status": "no_data",
+      "payload": {
+        "operation": "add_to_human_review_queue",
+        "queue": "non_target_market_review",
+        "owner_team": "partnerships",
+        "priority": "medium",
+        "sla_hours": 48,
+        "company_display_name": "Emel Green Power Italia",
+        "company_display_source": "extracted_raw_company_name",
+        "company_name_needs_review": false,
+        "company_domain": "emel-green.example",
+        "contact": {
+          "name": "Luca Conti",
+          "email": "l.conti@emel-green.example",
+          "phone": "+39 06 8305111"
+        },
+        "reason": "Lead is outside the current target Southeast Asia market.",
+        "next_step": "Review for partnership, supplier, or future expansion relevance.",
+        "route_notes": [
+          "Validation status: valid",
+          "Dedup status: new",
+          "Enrichment validation status: no_data",
+          "Score status: scored",
+          "Score: 65",
+          "Tier: B",
+          "Country: Italy",
+          "Do not route to normal Malaysia sales workflow without review."
+        ],
+        "validation": {
+          "status": "valid",
+          "errors": [],
+          "warnings": [],
+          "review_reasons": []
+        },
+        "dedup": {
+          "status": "new",
+          "matched_company_name": "",
+          "matched_crm_org_id": "",
+          "match_type": "no_match",
+          "reason": "No strong duplicate match found."
+        },
+        "score": {
+          "total_score": 65,
+          "tier": "B",
+          "client_score_1_to_5": 4,
+          "score_rationale": "Client score 4 because this is a Tier B lead with good fit but lower urgency or confidence than Tier A.",
+          "confidence": "medium",
+          "flags": [
+            "outside_target_market",
+            "no_trusted_enrichment_used"
+          ],
+          "review_reasons": [
+            "Country is outside the main target market."
+          ]
+        }
+      }
+    }
+  ]
+}
